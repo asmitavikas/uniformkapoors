@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sign-In Sign-Up</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" src = "../assets/css/first_page.css"></style>
+</head>
+<body background = "../assets/img/background2.jpg" style="background-color:rgba(255,0,0,0.5);">
+	<!-- Button trigger modal -->
+
+	<div class="container"> 
+   	 <hr class="prettyline">
+	 <br>
+	 <center>
+	 	<font color="red">
+			<h1><b>WELCOME</b></h1>
+			<h3>Kindly Sign-In or Register to use the service</h3>
+			<em>THE UNIFROM SHOP : < enter address ></em>
+			<br>
+				<button class="btn btn-primary btn-lg" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In/Register</button>
+		</font>
+	</center>
+	<br>
+	 <hr class="prettyline">
+    </div>
+  
+
+	<!-- Modal -->
+	<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  		<div class="modal-dialog modal-sm">
+	  		  <div class="modal-content">
+	        	<br>
+	        		<div class="bs-example bs-example-tabs">
+	            		<ul id="myTab" class="nav nav-tabs">
+	              			<li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+	              			<li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+	              			<li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+	            		</ul>
+	       			</div>
+	      			<div class="modal-body">
+	        			<div id="myTabContent" class="tab-content">
+	       					<div class="tab-pane fade in" id="why">
+	       						<p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone</p>
+	        					<p></p><br> Please contact <a mailto:href="madhur2511@gmail.com"></a>madhur2511@gmail.com</a> for any other inquiries.</p>
+	        				</div>
+	        			<!-- enter sign in credentials -->
+	        			<div class="tab-pane fade active in" id="signin"> 
+	            			<form class="form-horizontal">
+		            			<fieldset>
+		            				<!-- Sign In Form -->
+		            				<!-- Phone number input-->
+		            				<div class="control-group">
+		              					<label class="control-label" for="user">Mobile No:</label>
+		              					<div class="controls">
+		                					<input required="" id="user" name="user" type="numbers" class="form-control" placeholder="9886408227" class="input-medium" required="">
+		              					</div>
+		            				</div>
+
+		            				<!-- Password input-->
+		            				<div class="control-group">
+		              					<label class="control-label" for="passwordinput">Password:</label>
+		              					<div class="controls">
+		                					<input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+		              					</div>
+		            				</div>
+
+		            				<!-- Multiple Checkboxes (inline) -->
+		            				<div class="control-group">
+		              					<label class="control-label" for="rememberme"></label>
+		             					<div class="controls">
+		                					<label class="checkbox inline" for="rememberme-0">
+		                  						<input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+		                  						Remember me
+		                					</label>
+		              					</div>
+		            				</div>
+
+		            				<!-- Button -->
+		            				<div class="control-group">
+		              					<label class="control-label" for="signin"></label>
+		              					<div class="controls">
+		                					<button id="signin" name="signin" class="btn btn-success" onclick="login()">Sign In</button>
+		              					</div>
+		            				</div>
+		            			</fieldset>
+	            			</form>
+	        			</div>
+	        			<!-- enter sign up credentials -->
+	        			<div class="tab-pane fade" id="signup">
+	            			<form class="form-horizontal">
+	            				<fieldset>
+	            					<!-- Sign Up Form -->
+	           						<!-- Text input-->
+	            					<div class="control-group">
+	              						<label class="control-label" for="userid">Mobile Number:</label>
+	              						<div class="controls">
+	                						<input id="userid" name="userid" class="form-control" type="number" placeholder="9886408227" class="input-large" required="">
+	              						</div>
+	            					</div>
+	            
+	           						<!-- Text input-->
+	            					<div class="control-group">
+	              						<label class="control-label" for="setpassword">Set Password:</label>
+	              						<div class="controls">
+	                						<input id="setpassword" class="form-control" name="setpassword" type="password" placeholder="********" class="input-large" required="">
+	                						<em> 1-8 characters </em>
+	              						</div>
+	            					</div>
+	            
+	            					<!-- Multiple Radios (inline) -->
+	            					
+	            					<br>
+	            					<div class="control-group">
+	              						<label class="control-label" for="humancheck">Humanity Check:</label>
+	              						<div id="humanitycheck" class="controls">
+	                						<label class="radio inline" for="humancheck-0">
+	                  							<input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
+	                						<label class="radio inline" for="humancheck-1">
+	                  							<input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+	              						</div>
+	            					</div>
+	            					
+	            
+	            					<!-- Button -->
+	            					<div class="control-group">
+	              						<label class="control-label" for="confirmsignup"></label>
+	              						<div class="controls">
+	                					<button id="confirmsignup" name="confirmsignup" class="btn btn-success" onclick="signup()">Sign Up</button>
+	              						</div>
+	            					</div>
+	            				</fieldset>
+	            			</form>
+	      				</div>
+	    			</div>
+	      		</div>
+	      		<div class="modal-footer">
+	      			<center>
+	        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        		</center>
+	      		</div>
+	    	  </div>
+  		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="../assets/js/login_signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+person enters the website by login in the main page.
+now a box appears where he is either requested to login or sign up.
+sign up :
+	user enters name (not null)
+				phone number (not null, numbers only)
+				address (not null)
+				class (not null, drop down)
+				school (not null, drop down)
+		as the person is done entering the information, we add it to the database giving a unique id and also attaching a shopping cart key to it
+		doubt -> sould the otp given only once for verification? or each time during login process to check if same person is loging in
+				if given only once, the password should be associated here as a key and the user needs to enter it on signup
+
+login up :
+	user enters phone number (not null, numbers only)
+				passowrd (not null)
+		if OTP is given each time during sign in, then we need to have a table for phone number and OTP, where we need to update OTP each time and then match with value entered by user.
+
+View Profile :
+	option to edit on the go. then we update the database accordingly
+	
+view products : 
+	1. via school
+	2. via student details
+
+	1. via school 
+		the user enter the school name and as soon as he finishes, the picture of the uniform appears with option for boy/girl in checkbox next to the picture
+		also we shall have the check box for size below the picture.
+		once the user has checked on all the required boxes, and clicked submit -> entry of transaction key is made next to his shopping cart key in a seperate table. 
+		in the shopping cart, we enter 
+									shirt id (each school has a shirt id associated with itself to identify the shirt worn by them)
+									shirt size (null if not applicable) 
+									shirt color (null if not applicable)
+									same for rest garments...
+									current flag = true (once we log out, we make current flag = false)
+		for more transactions, more rows added wrt that shopping key with different transaction key.
+	
+	2. via student details
+		the user enters the shirt size and color
+			(what to do about the id column here???????????)
+									
